@@ -1,4 +1,5 @@
-# Python-Miniprojects -  Simple Clock
+# Python-Miniprojects -  
+1.Simple Clock
 Clock README
 This code is an example of a simple clock implemented using the Tkinter library in Python. It displays the current time in the format of hours, minutes, seconds, and AM/PM.
 
@@ -78,3 +79,46 @@ Feel free to experiment and adjust the code to suit your preferences.
 
 Contributions
 Contributions to this code are welcome. If you find any issues or would like to add new features, please submit a pull request or open an issue on the GitHub repository.
+
+
+QR Code Generator
+This code generates a QR code using the pyqrcode library, which allows you to encode data into QR codes. It also utilizes the pyzbar library to decode QR codes, and the PIL (Python Imaging Library) library to handle images.
+
+Installation
+To run this code, you need to have the following dependencies installed:
+
+pyqrcode
+pyzbar
+PIL
+You can install these dependencies using pip:
+
+bash
+Copy code
+pip install pyqrcode
+pip install pyzbar
+pip install Pillow
+Usage
+Import the required libraries:
+python
+Copy code
+import pyqrcode
+from pyzbar.pyzbar import decode
+from PIL import Image
+Generate a QR code:
+python
+Copy code
+qr = pyqrcode.create('This is an awesome tutorial!!')
+qr.png('qrcode.png', scale='10')
+The code above creates a QR code with the content "This is an awesome tutorial!!" and saves it as a PNG image file named qrcode.png with a scale of 10.
+
+Decoding QR Codes
+To decode a QR code, you can use the decode function from the pyzbar.pyzbar module. This function takes an image file as input and returns a list of decoded QR codes.
+
+python
+Copy code
+decoded_codes = decode(Image.open('qrcode.png'))
+for code in decoded_codes:
+    print(code.data)
+The code above opens the qrcode.png image file and decodes any QR codes present in the image. It then prints the decoded data.
+
+Note: Make sure you have an image file with a valid QR code before attempting to decode it.
