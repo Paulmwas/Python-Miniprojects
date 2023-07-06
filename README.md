@@ -122,3 +122,65 @@ for code in decoded_codes:
 The code above opens the qrcode.png image file and decodes any QR codes present in the image. It then prints the decoded data.
 
 Note: Make sure you have an image file with a valid QR code before attempting to decode it.
+
+3.Calculator
+This code implements a simple calculator in Python. It allows users to perform basic mathematical operations such as addition, subtraction, division, and multiplication.
+
+Usage
+Define the mathematical operations:
+python
+Copy code
+def plus(a, b):
+    return a + b
+
+def minus(a, b):
+    return a - b
+
+def divide(a, b):
+    return a / b
+
+def multiply(a, b):
+    return a * b
+Prompt the user to enter two numbers:
+python
+Copy code
+a = int(input('Please enter your first number: '))
+b = int(input('Please enter your second number: '))
+Display the menu and prompt the user to select an operation:
+python
+Copy code
+option = int(input('''
+1. Add
+2. Subtract
+3. Divide
+4. Multiply
+5. Exit
+'''))
+Perform the selected operation and repeat the process until the user chooses to exit:
+python
+Copy code
+while option != 5:
+    if option == 1:
+        print(plus(a, b))
+        # Prompt the user for new inputs and the next operation
+    elif option == 2:
+        print(minus(a, b))
+        # Prompt the user for new inputs and the next operation
+    elif option == 3:
+        print(divide(a, b))
+        # Prompt the user for new inputs and the next operation
+    elif option == 4:
+        print(multiply(a, b))
+        # Prompt the user for new inputs and the next operation
+    else:
+        print("Invalid option. Please try again.")
+    
+    a = float(input('Please enter your first number: '))
+    b = float(input('Please enter your second number: '))
+    option = int(input('''
+1. Add
+2. Subtract
+3. Divide
+4. Multiply
+5. Exit
+'''))
