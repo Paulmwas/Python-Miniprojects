@@ -81,7 +81,7 @@ Contributions
 Contributions to this code are welcome. If you find any issues or would like to add new features, please submit a pull request or open an issue on the GitHub repository.
 
 
-QR Code Generator
+2.QR Code Generator
 This code generates a QR code using the pyqrcode library, which allows you to encode data into QR codes. It also utilizes the pyzbar library to decode QR codes, and the PIL (Python Imaging Library) library to handle images.
 
 Installation
