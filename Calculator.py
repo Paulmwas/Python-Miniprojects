@@ -8,7 +8,7 @@ def divide(a,b):
     return a/b
 
 def multiply(a,b):
-    return a+b
+    return a*b
 
 a=int(input('Please enter your first number: '))
 b=int(input('Please enter your second number: '))
